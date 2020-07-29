@@ -8,7 +8,7 @@ const setupInput = function (conn) {
   stdin.resume();
 
   stdin.on('data', (key) => {
-    console.log('key:', key)
+    // console.log('key:', key)
     if (key === '\u0003') {
       process.exit();
     }
@@ -29,13 +29,7 @@ const setupInput = function (conn) {
       connection.write('Move: right');
     }
   })
-  // stdin.on('data', (key) => {
-  //   if (key === 'd') {
-  //     connection.write('Move: right');
-  //   }
-  // })
-
-
+  
   return stdin;
 }
 
